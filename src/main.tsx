@@ -5,11 +5,11 @@ import './styles.css'
 
 const images = {
   hero: '/images/Screenshot_2026-08-28_100902.png',
-  ceramics: '/images/Screenshot_2026-08-28_100902.png',
-  store: '/images/Screenshot_2026-08-28_100958.png',
-  gift: '/images/Screenshot_2026-08-28_100958.png',
-  wrapping: '/images/Screenshot_2026-08-28_101105.png',
-  flatlay: '/images/Screenshot_2026-08-28_101105.png',
+  ceramics: '/images/Screenshot_2026-08-28_100958.png',
+  store: '/images/Screenshot_2026-08-28_101105.png',
+  gift: '/images/Screenshot_2026-08-28_101204.png',
+  wrapping: 'https://images.pexels.com/photos/6333158/pexels-photo-6333158.jpeg?auto=compress&cs=tinysrgb&h=900&w=700',
+  flatlay: 'https://images.pexels.com/photos/34972177/pexels-photo-34972177.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200',
 }
 
 function App() {
