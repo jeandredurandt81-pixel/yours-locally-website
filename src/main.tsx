@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowRight, AtSign, ChevronDown, MapPin, Menu, Phone, Search, X } from 'lucide-react'
+import { ArrowRight, AtSign, ChevronDown, MapPin, Menu, Phone, X } from 'lucide-react'
 import './styles.css'
 
 const images = {
-  hero: 'https://images.pexels.com/photos/33316022/pexels-photo-33316022.jpeg?auto=compress&cs=tinysrgb&h=1200&w=1600',
-  ceramics: 'https://images.pexels.com/photos/27208616/pexels-photo-27208616.jpeg?auto=compress&cs=tinysrgb&h=900&w=700',
-  store: 'https://images.pexels.com/photos/5865388/pexels-photo-5865388.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200',
-  gift: 'https://images.pexels.com/photos/32923176/pexels-photo-32923176.jpeg?auto=compress&cs=tinysrgb&h=900&w=700',
-  wrapping: 'https://images.pexels.com/photos/5486790/pexels-photo-5486790.jpeg?auto=compress&cs=tinysrgb&h=900&w=700',
-  flatlay: 'https://images.pexels.com/photos/5491840/pexels-photo-5491840.jpeg?auto=compress&cs=tinysrgb&h=900&w=1200',
+  hero: '/images/Screenshot_2026-08-28_100902.png',
+  ceramics: '/images/Screenshot_2026-08-28_100902.png',
+  store: '/images/Screenshot_2026-08-28_100958.png',
+  gift: '/images/Screenshot_2026-08-28_100958.png',
+  wrapping: '/images/Screenshot_2026-08-28_101105.png',
+  flatlay: '/images/Screenshot_2026-08-28_101105.png',
 }
 
 function App() {
@@ -25,13 +25,13 @@ function App() {
     <div className="site-shell">
       <div className="top-note"><span>Free local pickup in Gqeberha</span><span className="top-note-dot">✦</span><span>Open today until 4:30pm</span></div>
       <header className="header">
-        <a className="brand" href="#top" aria-label="Locally Yours home"><span className="brand-script">Locally</span><span className="brand-sans">YOURS</span><span className="brand-spark">✦</span></a>
+        <a className="brand" href="#top" aria-label="Locally Yours home"><img className="brand-logo" src="/mprg.png" alt="Locally Yours" /></a>
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
           <a href="#shop" onClick={() => setMenuOpen(false)}>Shop <ChevronDown size={14} /></a>
           <a href="#story" onClick={() => setMenuOpen(false)}>Our story</a>
           <a href="#visit" onClick={() => setMenuOpen(false)}>Visit us</a>
         </nav>
-        <div className="header-actions"><button className="icon-button" aria-label="Search"><Search size={19} strokeWidth={1.7} /></button><button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button></div>
+        <div className="header-actions"><button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button></div>
       </header>
 
       <main id="top">
@@ -60,7 +60,7 @@ function App() {
         <section className="newsletter"><div><p className="eyebrow"><span className="eyebrow-line" /> A little note from us</p><h2>Good things are<br /><em>worth sharing.</em></h2></div><div className="newsletter-form"><p>Join our happy mail for new finds, gifting ideas and the occasional surprise.</p><form onSubmit={(event) => { event.preventDefault(); handleGiftClick() }}><input type="email" placeholder="Your email address" aria-label="Your email address" required /><button type="submit" aria-label="Join newsletter"><ArrowRight size={19} /></button></form><small>We’ll only send the good stuff. Promise.</small></div></section>
       </main>
 
-      <footer className="footer"><a className="brand footer-brand" href="#top"><span className="brand-script">Locally</span><span className="brand-sans">YOURS</span><span className="brand-spark">✦</span></a><p>Small joys, found locally.</p><div className="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#visit">Visit</a><a href="https://www.instagram.com" target="_blank" rel="noreferrer"><AtSign size={17} /></a></div><span className="copyright">© 2026 Locally Yours Shop</span></footer>
+      <footer className="footer"><a className="brand footer-brand" href="#top"><img className="brand-logo" src="/mprg.png" alt="Locally Yours" /></a><p>Small joys, found locally.</p><div className="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#visit">Visit</a><a href="https://www.instagram.com" target="_blank" rel="noreferrer"><AtSign size={17} /></a></div><span className="copyright">© 2026 Locally Yours Shop</span></footer>
       {showToast && <div className="toast"><span>✦</span> You’re on the lovely list.</div>}
     </div>
   )
